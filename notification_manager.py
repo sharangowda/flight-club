@@ -1,4 +1,3 @@
-import requests
 from twilio.rest import Client
 from sheets import *
 
@@ -20,4 +19,4 @@ class NotificationManager:
         client = Client(self.twilio_account_sid,
                         self.twilio_auth_token)
         message = client.messages.create(
-            body=f"Today's flight charges:\n\n{self.body}", from_=self.twilio_phone_number, to=+1234567890)  #Enter your phone number to get the messages.
+            body=f"Today's flight charges:\n\n{self.body}", from_=self.twilio_phone_number, to=+1234567890)  # Enter your phone number to get the messages.
